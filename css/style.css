@@ -77,6 +77,12 @@ body {
   align-items: center;
   justify-content: center;
   height: 64px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .nav-container { justify-content: center; }
+  .hamburger { position: absolute; right: 1rem; }
 }
 
 .nav-logo img {
@@ -987,8 +993,8 @@ body {
 }
 
 .contact-cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.25rem;
   justify-content: center;
 }
@@ -997,10 +1003,13 @@ body {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.18);
   border-radius: var(--radius);
-  padding: 1.75rem 2rem;
-  min-width: 175px;
+  padding: 1.75rem 1rem;
   backdrop-filter: blur(6px);
   transition: var(--transition);
+}
+
+@media (max-width: 480px) {
+  .contact-cards { grid-template-columns: repeat(2, 1fr); }
 }
 
 .contact-card:hover {
