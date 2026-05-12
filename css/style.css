@@ -1487,27 +1487,9 @@ body {
   box-shadow: 0 8px 22px rgba(13,45,78,0.25);
 }
 
-/* ====== NorthStar — סקשן ראשון כחול כהה (המשך page-header) ====== */
+/* ====== NorthStar — סקשן ראשון, אותו צבע כמו גל ה-page-header ====== */
 .ns-dark-section {
-  background: linear-gradient(180deg, var(--primary-mid) 0%, #0f3560 100%);
-}
-.ns-dark-section .section-title,
-.ns-dark-section .ns-lead,
-.ns-dark-section h3,
-.ns-dark-section ul li,
-.ns-dark-section p {
-  color: #e8f0fa;
-}
-.ns-dark-section .section-line {
-  background: rgba(255,255,255,0.3);
-}
-.ns-dark-section .ns-card {
-  background: rgba(255,255,255,0.07);
-  color: #e8f0fa;
-}
-.ns-dark-section .northstar-tagline {
-  background: rgba(255,255,255,0.08);
-  color: #e8f0fa;
+  background: #ddeaf8;
 }
 
 /* ====== PDF מצגת — רספונסיבי ====== */
