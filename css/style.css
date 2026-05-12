@@ -1487,6 +1487,17 @@ body {
   box-shadow: 0 8px 22px rgba(13,45,78,0.25);
 }
 
+/* ====== PDF מצגת — רספונסיבי ====== */
+.pdf-mobile-btn {
+  display: none;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 768px) {
+  .pdf-mobile-btn { display: block; }
+  .pdf-desktop-embed { display: none; }
+}
+
 /* ====== NorthStar עיצוב חדש ====== */
 .ns-header {
   text-align: center;
