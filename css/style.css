@@ -1487,6 +1487,118 @@ body {
   box-shadow: 0 8px 22px rgba(13,45,78,0.25);
 }
 
+/* ====== NorthStar עיצוב חדש ====== */
+.ns-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.ns-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  padding: 0.3rem 1.2rem;
+  border-radius: 50px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+.ns-lead {
+  max-width: 750px;
+  margin: 1rem auto 0;
+  color: var(--text-light);
+  line-height: 1.9;
+  font-size: 1.02rem;
+}
+
+/* מספרים בולטים */
+.ns-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+.ns-stat {
+  background: var(--primary);
+  border-radius: var(--radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+.ns-stat-num {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #FFD700;
+  line-height: 1;
+}
+.ns-stat-label {
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+/* כרטיסי תוכן */
+.ns-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.ns-card {
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  border-top: 5px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ns-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+.ns-card-blue  { border-top-color: #1e7fce; }
+.ns-card-teal  { border-top-color: #27ae60; }
+.ns-card-gold  { border-top-color: #c8992a; }
+
+.ns-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.ns-card-blue  .ns-card-icon { background: #e8f4fd; color: #1e7fce; }
+.ns-card-teal  .ns-card-icon { background: #e8f8f0; color: #27ae60; }
+.ns-card-gold  .ns-card-icon { background: #fdf6e3; color: #c8992a; }
+
+.ns-card h3 {
+  color: var(--primary);
+  font-size: 1.05rem;
+  margin-bottom: 0.9rem;
+}
+.ns-card ul {
+  padding-right: 1.2rem;
+  color: var(--text-light);
+  line-height: 2;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .ns-stats { grid-template-columns: repeat(2, 1fr); }
+  .ns-cards  { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .ns-stats { grid-template-columns: repeat(2, 1fr); }
+  .ns-stat-num { font-size: 2rem; }
+}
+
 /* ====== NorthStar ====== */
 .northstar-intro {
   text-align: center;
