@@ -890,8 +890,8 @@ body {
 }
 .canva-mask-l { top: 0; bottom: 0; left: 0;   width: 0.5%; }
 .canva-mask-r { top: 0; bottom: 0; right: 0;  width: 0.5%; }
-.canva-mask-t { top: 0; left: 0; right: 0;    height: 1.5%; }
-.canva-mask-b { bottom: 0; left: 0; right: 0; height: 1.5%; }
+.canva-mask-t { top: 0; left: 0; right: 0;    height: 4%; }
+.canva-mask-b { bottom: 0; left: 0; right: 0; height: 4%; }
 
 .canva-credit {
   text-align: center;
