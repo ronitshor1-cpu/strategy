@@ -871,10 +871,10 @@ body {
 .canva-embed-wrap {
   margin-bottom: 2.5rem;
 }
-/* iframe צר = פוסטר גדול, מסיכות מכסות שחור */
+/* רוחב בינוני — פוסטר גדול אך לא קטוע, מסיכות דקות */
 .canva-crop {
   position: relative;
-  width: 55%;
+  width: 75%;
   margin: 0 auto;
   aspect-ratio: 1 / 1.42;
   border-radius: 12px;
@@ -886,33 +886,35 @@ body {
   position: absolute;
   background: #ddeaf8;
   z-index: 2;
-  pointer-events: none; /* לחיצות עוברות דרך המסכה לפוסטר */
+  pointer-events: none;
 }
-.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 2%; }
-.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 2%; }
+.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 8%; }
+.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 8%; }
 .canva-mask-t { top: 0; left: 0; right: 0;    height: 2%; }
 .canva-mask-b { bottom: 0; left: 0; right: 0; height: 2%; }
 
 .canva-credit {
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 .canva-credit a {
-  color: var(--accent);
+  color: #fff;
+  background: var(--accent);
   text-decoration: none;
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.4rem;
-  border: 2px solid var(--accent);
+  gap: 0.6rem;
+  padding: 0.9rem 2.2rem;
   border-radius: 50px;
-  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 4px 16px rgba(30,127,206,0.4);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 .canva-credit a:hover {
-  background: var(--accent);
-  color: #fff;
+  background: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(13,45,78,0.3);
 }
 @media (max-width: 768px) {
   .canva-crop { width: 80%; }
