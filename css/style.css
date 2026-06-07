@@ -871,16 +871,28 @@ body {
 .canva-embed-wrap {
   margin-bottom: 2.5rem;
 }
-/* iframe צר → קנבה מגדילה את הפוסטר, הרקע השחור מצטמצם */
+/* iframe צר = פוסטר גדול, מסיכות מכסות שחור */
 .canva-crop {
   position: relative;
-  width: 55%;           /* רוחב צר = פוסטר גדול יותר בתוך ה-iframe */
+  width: 55%;
   margin: 0 auto;
-  aspect-ratio: 1 / 1.42;   /* יחס A4 פורטרט */
-  overflow: hidden;
+  aspect-ratio: 1 / 1.42;
   border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
+/* מסיכות שמכסות את הפסים השחורים של קנבה בצבע רקע האתר */
+.canva-mask {
+  position: absolute;
+  background: #ddeaf8;
+  z-index: 2;
+  pointer-events: none; /* לחיצות עוברות דרך המסכה לפוסטר */
+}
+.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 14%; }
+.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 14%; }
+.canva-mask-t { top: 0; left: 0; right: 0;    height: 4%; }
+.canva-mask-b { bottom: 0; left: 0; right: 0; height: 4%; }
+
 .canva-credit {
   text-align: center;
   margin-top: 0.75rem;
