@@ -894,7 +894,7 @@ body {
   pointer-events: none;
   z-index: 5;
 }
-.canva-over-t { top: 0;    height: 5%;  border-radius: 12px 12px 0 0; }
+.canva-over-t { top: 0;    height: 9%;  border-radius: 12px 12px 0 0; }
 .canva-over-b { bottom: 0; height: 7%;  border-radius: 0 0 12px 12px; }
 @media (max-width: 768px) {
   .canva-wrapper { width: 90%; }
