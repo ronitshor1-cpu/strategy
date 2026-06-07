@@ -888,10 +888,10 @@ body {
   z-index: 2;
   pointer-events: none;
 }
-.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 8%; }
-.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 8%; }
-.canva-mask-t { top: 0; left: 0; right: 0;    height: 2%; }
-.canva-mask-b { bottom: 0; left: 0; right: 0; height: 2%; }
+.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 5%; }
+.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 5%; }
+.canva-mask-t { top: 0; left: 0; right: 0;    height: 1.5%; }
+.canva-mask-b { bottom: 0; left: 0; right: 0; height: 1.5%; }
 
 .canva-credit {
   text-align: center;
