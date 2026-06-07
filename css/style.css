@@ -871,27 +871,21 @@ body {
 .canva-embed-wrap {
   margin-bottom: 2.5rem;
 }
-/* רוחב בינוני — פוסטר גדול אך לא קטוע, מסיכות דקות */
+/* רוחב בינוני — פוסטר גדול, box-shadow מכסה שחור */
 .canva-crop {
   position: relative;
   width: 75%;
   margin: 0 auto;
-  aspect-ratio: 1 / 1.63;
+  aspect-ratio: 1 / 1.52;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  /* inset box-shadow מרונדר מעל ה-iframe ומסתיר שחור בשולות */
+  box-shadow:
+    inset 0 0 0 8px #ddeaf8,
+    0 4px 20px rgba(0,0,0,0.15);
 }
-/* מסיכות שמכסות את הפסים השחורים של קנבה בצבע רקע האתר */
-.canva-mask {
-  position: absolute;
-  background: #ddeaf8;
-  z-index: 2;
-  pointer-events: none;
-}
-.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 0.5%; }
-.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 0.5%; }
-.canva-mask-t { top: 0; left: 0; right: 0;    height: 2%; }
-.canva-mask-b { bottom: 0; left: 0; right: 0; height: 2%; }
+/* מסיכות — לא נחוצות יותר, נסתיר */
+.canva-mask { display: none; }
 
 .canva-credit {
   text-align: center;
