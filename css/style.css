@@ -871,27 +871,34 @@ body {
 .canva-embed-wrap {
   margin-bottom: 2.5rem;
 }
-/* רוחב בינוני — פוסטר גדול אך לא קטוע */
-.canva-crop {
+/* wrapper מרכז את הפוסטר ומשמש עוגן לכיסויים */
+.canva-wrapper {
   position: relative;
   width: 75%;
   margin: 0 auto;
+}
+/* iframe עם overflow:hidden לחיתוך עדין של הקצוות */
+.canva-crop {
+  width: 100%;
   aspect-ratio: 1 / 1.63;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
-/* מסיכות דקות לכיסוי שולות */
-.canva-mask {
+/* כיסויים כאחים של canva-crop — מחוץ ל-overflow:hidden, מופיעים מעל iframe */
+.canva-over-t,
+.canva-over-b {
   position: absolute;
+  left: 0; right: 0;
   background: #ddeaf8;
-  z-index: 2;
   pointer-events: none;
+  z-index: 5;
 }
-.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 0.5%; }
-.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 0.5%; }
-.canva-mask-t { top: 0; left: 0; right: 0;    height: 5%; }
-.canva-mask-b { bottom: 0; left: 0; right: 0; height: 7%; }
+.canva-over-t { top: 0;    height: 5%;  border-radius: 12px 12px 0 0; }
+.canva-over-b { bottom: 0; height: 7%;  border-radius: 0 0 12px 12px; }
+@media (max-width: 768px) {
+  .canva-wrapper { width: 90%; }
+}
 
 .canva-credit {
   text-align: center;
