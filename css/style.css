@@ -888,23 +888,31 @@ body {
   z-index: 2;
   pointer-events: none; /* לחיצות עוברות דרך המסכה לפוסטר */
 }
-.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 14%; }
-.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 14%; }
-.canva-mask-t { top: 0; left: 0; right: 0;    height: 4%; }
-.canva-mask-b { bottom: 0; left: 0; right: 0; height: 4%; }
+.canva-mask-l { top: 0; bottom: 0; left: 0;   width: 2%; }
+.canva-mask-r { top: 0; bottom: 0; right: 0;  width: 2%; }
+.canva-mask-t { top: 0; left: 0; right: 0;    height: 2%; }
+.canva-mask-b { bottom: 0; left: 0; right: 0; height: 2%; }
 
 .canva-credit {
   text-align: center;
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
+  margin-top: 1rem;
 }
 .canva-credit a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  border: 2px solid var(--accent);
+  border-radius: 50px;
+  transition: background 0.2s, color 0.2s;
 }
 .canva-credit a:hover {
-  text-decoration: underline;
+  background: var(--accent);
+  color: #fff;
 }
 @media (max-width: 768px) {
   .canva-crop { width: 80%; }
