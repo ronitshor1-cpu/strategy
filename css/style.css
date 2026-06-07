@@ -871,6 +871,15 @@ body {
 .canva-embed-wrap {
   margin-bottom: 2.5rem;
 }
+/* המסגרת שחותכת את הרקע השחור מסביב לפוסטר */
+.canva-crop {
+  position: relative;
+  width: 100%;
+  height: 820px;          /* גובה הפוסטר הגלוי */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
 .canva-credit {
   text-align: center;
   margin-top: 0.75rem;
@@ -885,14 +894,10 @@ body {
   text-decoration: underline;
 }
 @media (max-width: 768px) {
-  .canva-embed-wrap iframe {
-    height: 380px !important;
-  }
+  .canva-crop { height: 520px; }
 }
 @media (max-width: 480px) {
-  .canva-embed-wrap iframe {
-    height: 280px !important;
-  }
+  .canva-crop { height: 360px; }
 }
 
 /* ===== PDF DOWNLOADS ===== */
